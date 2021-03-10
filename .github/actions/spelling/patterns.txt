@@ -1,0 +1,29 @@
+# appveyor
+\bci\.appveyor\.com/api/projects/status/[0-9a-z]+
+
+# msdn
+msdn\.microsoft\.com/(?:[^/]+/|)library/\S*\.aspx?
+
+# Slack
+slack://[a-zA-Z0-9?&=]+
+\bslack\.com/[-0-9a-zA-Z/_]*
+
+# list-manage
+[-0-9a-z.]*\blist-manage\.com/subscribe/post\?(?:\&?[a-z]+=[0-9a-f]*)*
+
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9a-fA-FgGrR_]{2,}(?:[uU]?[lL]{0,2}|u\d+)\b
+# uuid:
+[<({"'>_][0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[<'"})>]
+
+\bOriginalChecksum=[0-9a-f]+
+
+# bin/app/data/syntax_highlighting_rules/python.rules
+"\\\\b
+
+# Flags
+[" (]-D
+ -f
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
